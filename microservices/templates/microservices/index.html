@@ -1,0 +1,27 @@
+{% extends "microservices/base.html" %}
+
+{% block content %}
+    <div class="container">
+        <h2>Active Services</h2>
+        {% if not services %}
+            <p>
+                You don't have any services registered yet.  Click on "Admin"
+                to add services to your applicaiton.
+            </p>
+        {% else %}
+            <table class="table table-striped">
+                <tr>
+                    <th>Service Name</th>
+                    <th>Service Endpoint</th>
+                </tr>
+                {% for svc in services %}
+                    <tr>
+                        <td>{{ svc.name }}</td>
+                        <td><a target="_blank" href="http://{{ svc.url }}">{{ svc.url }}</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+    </div>
+{% endblock %}
+
