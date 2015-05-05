@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(name='django-microservices',
       version='0.1',
       description='A framework for building microservices with Django.',
-      url='http://github.com/lander2k2/django-microservices',
+      url='https://github.com/lander2k2/django-microservices',
       author='Richard Lander',
       author_email='lander2k2@gmail.com',
       license='MIT',
