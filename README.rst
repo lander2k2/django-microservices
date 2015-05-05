@@ -9,10 +9,11 @@ Use Case
 --------
 You are using Django to build an application with a microservices architecture.
 You have serveral services that communicate to each over HTTP and each service
-is it's own Django project.  You need to run `./manage.py runserver [port]` for
+is it's own Django project.  You need to run ``./manage.py runserver [port]`` for
 each service to bring it up and have the application function when developing.
 
 Django-microservices helps by:
+
 #. giving you a single `/.manage.py runcluster` command to fire up the development
    server for each project
 #. providing a service discovery API that will allow your services to find one another
