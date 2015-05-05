@@ -14,7 +14,7 @@ each service to bring it up and have the application function when developing.
 
 Django-microservices helps by:
 
-#. giving you a single `/.manage.py runcluster` command to fire up the development
+#. giving you a single ``/.manage.py runcluster`` command to fire up the development
    server for each project
 #. providing a service discovery API that will allow your services to find one another
 
@@ -89,8 +89,8 @@ Edit the root urls file to look like this::
 Usage
 -----
 
-In your service manager project, run `./manage.py runcluster` then navigate
-to `http://127.0.0.1:8000`.
+In your service manager project, run ``./manage.py runcluster`` then navigate
+to ``http://127.0.0.1:8000``.
 
 The first time you do this, you won't see any services registerd.  Click
 on the "Admin" link, log in and register services by clicking on "Services"
@@ -107,6 +107,6 @@ the settings.py file::
 
     SERVICES = requests.get('http://127.0.0.1:8000/services/').json()
 
-Then use `settings.SERVICES[service_name]` to get the correct IP for any service
+Then use ``settings.SERVICES[service_name]`` to get the correct IP for any service
 in your application.
 
